@@ -1,0 +1,118 @@
+<html>
+
+<head>
+    <title>Card</title>
+    <style type="text/css">
+        .card-container {
+            position: absolute;
+            overflow-y: hidden;
+            width: 227px;
+            height: 210px;
+            border-radius: 6px;
+            box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-front {
+            z-index: 1;
+            position: absolute;
+            width: 227px;
+            height: 210px;
+            border-radius: 6px;
+            background-repeat: no-repeat;
+            background-size: 227px 210px;
+            background-position: center;
+            background-image: url('./img.jpg');
+            box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.3);
+
+            -webkit-transition: all 100ms;
+            -moz-transition: all 100ms;
+            transition: all 100ms;
+        }
+
+        .card-container:hover>.card-front {
+            transform: translateY(-25%);
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0px;
+            height: 25%;
+            width: 100%;
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .itinerary_icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%) translateX(-5px);
+            width: 51px;
+            height: 44px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url('./itinerary_icon.png');
+        }
+
+        .footer-text {
+            position: absolute;
+            left: 55px;
+            top: 50%;
+            transform: translateY(-42%);
+        }
+
+        .footer-text>span:nth-child(1) {
+            display: block;
+            color: #55a3c9;
+            text-transform: uppercase;
+            font-size: 13px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .footer-text>span:nth-child(2) {
+            display: block;
+            color: white;
+            font-size: 17px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .card-back {
+            position: absolute;
+            display: table;
+            bottom: 0;
+            height: 25%;
+            text-align: center;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .card-back-text {
+            color: #665a52;
+            font-size: 17px;
+            display: table-cell;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card-container">
+        <div class="card-front">
+            <div class="footer">
+                <div class="itinerary_icon"></div>
+                <div class="footer-text">
+                    <span>
+                        Nouvelle-Zélande
+                    </span>
+                    <span>
+                        13 jours - 1 704 &euro;
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="card-back">
+            <span class="card-back-text">Escapade au Groenland - Région de Kulusuk-Tasiilaq</span>
+        </div>
+    </div>
+</body>
+</html>
